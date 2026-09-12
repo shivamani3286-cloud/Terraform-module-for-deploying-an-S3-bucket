@@ -18,10 +18,10 @@ module "s3_bucket" {
 
   lifecycle_rules = [
     {
-      id                                  = "retention"
-      enabled                             = true
-      expiration_days                     = 365
-      noncurrent_version_expiration_days  = 90
+      id                                 = "retention"
+      enabled                            = true
+      expiration_days                    = 365
+      noncurrent_version_expiration_days = 90
       transitions = [
         {
           days          = 30
@@ -31,8 +31,4 @@ module "s3_bucket" {
     }
   ]
 
-  tags = {
-    Environment = "example"
-    ManagedBy   = "terraform"
-  }
 }
