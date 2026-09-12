@@ -2,6 +2,11 @@
 
 A reusable Terraform module for creating a secure, versioned Amazon S3 bucket with server-side encryption, lifecycle management, public-access protection, and an optional bucket policy.
 
+<p align="center">
+  <img src="img.png" alt="result-capture" width="100%">
+</p>
+
+
 ## Features
 
 - Terraform module structure with `variables.tf`, `outputs.tf`, and `main.tf`
