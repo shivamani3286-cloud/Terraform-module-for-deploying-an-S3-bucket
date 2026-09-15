@@ -71,8 +71,10 @@ module "logs_bucket" {
       ]
     }
   ]
-}
+
 ```
+
+
 
 ### Optional KMS encryption
 
@@ -116,6 +118,22 @@ module "policy_bucket" {
   })
 }
 ```
+### Using a released module version
+
+For stable and reproducible deployments, consumers should pin the module
+to a specific Git tag.
+
+```hcl
+module "logs_bucket" {
+  source = "git::https://github.com/shivamani3286-cloud/Terraform-module-for-deploying-an-S3-bucket.git?ref=v1.0.0"
+
+  bucket_name = "my-company-app-logs-123456"
+
+  tags = {
+    Environment = "dev"
+    ManagedBy   = "terraform"
+  }
+}
 
 ## Inputs
 
