@@ -127,7 +127,7 @@ to a specific Git tag.
 module "logs_bucket" {
   source = "git::https://github.com/shivamani3286-cloud/Terraform-module-for-deploying-an-S3-bucket.git?ref=v1.0.0"
 
-  bucket_name = "bucket-name"
+  bucket_name = "my-company-policy-bucket-123456"
 
   tags = {
     Environment = "dev"
